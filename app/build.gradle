@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.bxh.dynamic"
+        applicationId "com.test.dynamic"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
@@ -18,7 +18,24 @@ android {
         }
     }
 }
+/*
+//定义一个函数，target是生成jar包的文件名，classDir是class文件所在的文件夹
+def makeJar(String target,String classDir){
+    exec{
+        executable "jar"   //调用jar
+        args "cvf",target
+        args "-C", classDir
+        args "","."
 
+
+    }
+}
+
+//新建一个task,名为buildtask,依赖build(build是一个自带的task)
+task buildtask(dependsOn:['build'])<< {
+    makeJar("dynamic.jar","src/main/java/com/bxh/dynamic/dyclass")
+}
+*/
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

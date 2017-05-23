@@ -1,7 +1,9 @@
-package com.bxh.dynamic;
+package com.test.dynamic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.test.dynamic.R;
 
 public class MainActivity extends AppCompatActivity {
 
